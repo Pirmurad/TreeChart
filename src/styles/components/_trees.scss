@@ -1,0 +1,134 @@
+#tree_wrapper {
+  margin: 5em auto;
+
+  .tree_area {
+    display: flex;
+    justify-content: center;
+
+    ul {
+      position: relative;
+      list-style: none;
+      padding-top: 20px;
+      display: flex;
+
+      li {
+        position: relative;
+        text-align: center;
+        padding: 20px 50px 0;
+
+        .root_node {
+          color: $black !important;
+          border: 0.5px dashed $silver;
+          background-color: $white !important;
+        }
+
+        .node_wrap {
+          border-radius: 0.5em;
+          height: 35px;
+          background-color: $blue;
+          display: inline-block;
+          padding: 10px;
+          position: relative;
+          color: $white;
+
+          .node_name {
+            display: flex;
+            max-width: 120px;
+            overflow: hidden;
+            white-space: nowrap;
+            font-weight: 500;
+            font-size: 12px;
+            height: 100%;
+            align-items: center;
+          }
+
+          .node_btn {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -30px;
+            width: 20px;
+            height: 20px;
+            margin: auto;
+            cursor: pointer;
+            z-index: 9;
+            transition: 250ms;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $white;
+
+            &:hover {
+              opacity: 0.8;
+            }
+
+            > i {
+              font-size: 10px;
+            }
+          }
+
+          .add_node,
+          .edit_node {
+            background-color: $light-gray;
+          }
+
+          .save_node {
+            background-color: $green;
+            right: -30px;
+          }
+
+          .cancel_node {
+            background-color: $yellow;
+            right: -55px;
+          }
+
+          .edit_node {
+            right: -55px;
+          }
+
+          .remove_node {
+            background-color: $danger;
+            right: -80px;
+          }
+        }
+
+        ul::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 50%;
+          border-left: 1px solid $light-gray;
+          width: 0;
+          height: 20px;
+        }
+
+        ul {
+          > li:first-child::before {
+            border: 0;
+          }
+          > li:last-child::after {
+            border: 0;
+          }
+
+          > li::after {
+            right: auto;
+            left: 50%;
+            border-left: 1px solid $light-gray !important;
+          }
+
+          > li::before,
+          > li::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 50%;
+            border-top: 1px solid $light-gray;
+            width: 50%;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
