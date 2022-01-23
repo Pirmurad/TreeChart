@@ -32,8 +32,9 @@
           color: $white;
 
           .node_name {
-            display: flex;
+            display: inline-block;
             max-width: 120px;
+            width: 100vw;
             overflow: hidden;
             white-space: nowrap;
             font-weight: 500;

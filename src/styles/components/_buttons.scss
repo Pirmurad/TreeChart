@@ -10,9 +10,10 @@
   touch-action: manipulation;
   cursor: pointer;
   background-image: none;
-  border: 1px solid transparent;
+  border: 1px solid $light-gray;
   padding: 0.5em;
-  @include transition(1s);
+  @include transition(500ms);
+  border-radius: 0.5em;
 }
 
 .btn-light {
@@ -42,5 +43,21 @@
     #z_in {
       border-left: 2px solid $gray !important;
     }
+  }
+}
+
+.btn-primary {
+  background-color: $blue !important;
+  color: $white !important;
+  border: 1px solid $blue !important;
+}
+
+.btn-primary-outline {
+  background-color: $white !important;
+  color: $black !important;
+
+  &:hover {
+    background-color: $blue !important;
+    color: $white !important;
   }
 }
