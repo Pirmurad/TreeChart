@@ -14,8 +14,8 @@ mix
   .options({
     processCssUrls: false,
   })
-  .minify("public/js/app.js", "public/js/js.css")
-  .minify("public/css/app.css", "public/css/full.css");
+  .minify("public/js/app.js")
+  .minify("public/css/app.css");
 
 mix.webpackConfig({
   plugins: [],
